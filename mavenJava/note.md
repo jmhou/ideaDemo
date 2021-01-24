@@ -38,7 +38,7 @@ public class Hello {
 
 
 ###6.新增单元测试类
-..\src\test\java\HelloTest.java
+..\src\test\java\day01.HelloTest.java
 import org.junit.Test;
 
 /**
@@ -46,7 +46,7 @@ import org.junit.Test;
  * @date 2021-01-24 12:10
  * @description function description
  */
-public class HelloTest {
+public class day01.HelloTest {
     @Test
     public void helloTest(){
         Hello hello = new Hello();
