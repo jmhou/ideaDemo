@@ -5,6 +5,8 @@ import org.junit.Test;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.Charset;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * @author Jimmy
@@ -12,9 +14,19 @@ import java.nio.charset.Charset;
  * @description function description
  */
 public class CharsetTest {
+    @Test
+    public void printCharsets(){
+        Map<String, Charset> map = Charset.availableCharsets();
+
+        Set<Map.Entry<String, Charset>> set = map.entrySet();
+
+        for (Map.Entry<String, Charset> entry : set) {
+            System.out.println(entry.getKey() + "=" + entry.getValue());
+        }
+    }
 
     @Test
-    public void test1() {
+    public void encodeDecode() {
         Charset csUTF8 = Charset.forName("UTF-8");
         Charset csGBK = Charset.forName("GBK");
 
